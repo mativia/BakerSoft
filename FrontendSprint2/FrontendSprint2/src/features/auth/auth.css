@@ -64,11 +64,14 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  align-items: center;
+  text-align: center;
 }
 
 .form-card .form-header p {
   margin: 0;
   color: #475569;
+  text-align: center;
 }
 
 .form-card .form-icon {
@@ -78,13 +81,14 @@
   background: rgba(240, 129, 26, 0.14);
   display: grid;
   place-items: center;
-  margin-bottom: 8px;
+  margin: 0 auto 8px auto;
 }
 
 .form-card h2 {
   margin: 0;
   font-size: 1.6rem;
   color: #0f172a;
+  text-align: center;
 }
 
 .alert {
@@ -139,6 +143,8 @@
   font-size: 1rem;
   transition: border 0.2s ease, box-shadow 0.2s ease;
   background: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .field input:focus {
@@ -156,10 +162,12 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  width: 100%;
 }
 
 .field .input-with-icon input {
   flex: 1;
+  min-width: 0;
 }
 
 .icon-button {
@@ -264,6 +272,53 @@
 
 .modal-card {
   width: min(400px, 100%);
+  text-align: left;
+}
+
+.modal-card .form-card {
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.modal-card .field {
+  width: 100%;
+  text-align: left;
+}
+
+.modal-card .field input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal-card .actions {
+  width: 100%;
+}
+
+.modal-card .actions button {
+  width: 100%;
+}
+
+.modal-card .field-inline {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.modal-card .field-inline label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-card .field-inline a {
+  color: #f0811a;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.modal-card .field-inline a:hover {
+  text-decoration: underline;
 }
 
 .modal-header {
