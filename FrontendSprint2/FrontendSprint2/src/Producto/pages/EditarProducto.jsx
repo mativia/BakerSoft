@@ -4,7 +4,7 @@ import { useAuth } from '../../features/auth/AuthContext.jsx';
 import { getUserInitials, getUserName } from '../../features/auth/userUtils.js';
 import FormEditarProducto from '../components/FormEditarProducto.jsx';
 import { getTipoProductoById } from '../../services/tipoProductoService';
-import '../EditarProducto.css';
+import '../styles/EditarProducto.css';
 
 function mapApiProducto(data, fallbackId) {
   if (!data || typeof data !== 'object') {

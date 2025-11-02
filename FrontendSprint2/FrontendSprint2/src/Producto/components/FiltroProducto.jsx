@@ -2,7 +2,7 @@
 import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import '../ConsultaProducto.css';
+import '../styles/ConsultaProducto.css';
 
 function FiltroProducto({ selectedEstados, selectedCategorias, onChange }) {
   const [open, setOpen] = useState(false);

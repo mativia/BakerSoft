@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { useAuth } from '../../features/auth/AuthContext.jsx';
 import { getUserInitials, getUserName } from '../../features/auth/userUtils.js';
 import FormAltaProducto from '../components/FormAltaProducto.jsx';
-import '../styles.css';
+import '../styles/styles.css';
 
 function AltaProducto() {
   const { user } = useAuth();

@@ -1,6 +1,6 @@
 ﻿import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import '../ConsultaProducto.css';
+import '../styles/ConsultaProducto.css';
 
 function MensajeResultados({ term, estados, categorias, total }) {
   if (!term && estados.length === 0 && categorias.length === 0) {

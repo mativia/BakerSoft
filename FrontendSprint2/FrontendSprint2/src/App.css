@@ -1,0 +1,27 @@
+/* Estilos para el componente App principal */
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+/* Estilos globales de la aplicación */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Resetear estilos por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Asegurar que no haya conflictos con el layout */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}

@@ -1,5 +1,5 @@
 ﻿import PropTypes from 'prop-types';
-import '../BajaProducto.css';
+import '../styles/BajaProducto.css';
 
 function ModalConfirmacion({ open, mode, productName, onCancel, onConfirm }) {
   if (!open) {

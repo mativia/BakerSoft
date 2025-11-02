@@ -7,8 +7,8 @@ import TablaProductos from '../components/TablaProductos.jsx';
 import FiltroProducto from '../components/FiltroProducto.jsx';
 import MensajeResultados from '../components/MensajeResultados.jsx';
 import MensajeSinResultados from '../components/MensajeSinResultados.jsx';
-import '../ConsultaProducto.css';
-import '../ListadoProducto.css';
+import '../styles/ConsultaProducto.css';
+import '../styles/ListadoProducto.css';
 
 const productosMock = [
   { codigo: '001', nombre: 'Pan Frances', categoria: 'Panaderia', estado: 'Activo' },

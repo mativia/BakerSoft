@@ -1,5 +1,5 @@
 ﻿import PropTypes from 'prop-types';
-import '../ConsultaProducto.css';
+import '../styles/ConsultaProducto.css';
 
 function MensajeSinResultados({ onReset }) {
   return (
