@@ -174,127 +174,135 @@ export default function Login() {
   }
 
   return (
-    <>
-      <section className="form" aria-labelledby="login-title">
-        <div className="form-card">
-          <div className="form-header">
-            <div className="form-icon" aria-hidden="true">
-              <svg
-                width="36"
-                height="36"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <path
-                  d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5Zm0 2c-3.866 0-7 3.134-7 7 0 .552.448 1 1 1h12c.552 0 1-.448 1-1 0-3.866-3.134-7-7-7Z"
-                  fill="#7A4D14"
-                />
-              </svg>
-            </div>
-            <h2 id="login-title">Iniciar sesion</h2>
-            <p>Ingresa tus credenciales para continuar</p>
-          </div>
-
-          {globalSuccess ? (
-            <div className="alert success" role="status" aria-live="polite">
-              <div className="alert-message">
-                <span>{globalSuccess}</span>
+    <div className="auth-layout">
+      <div className="auth-hero">
+        <div className="brand">BakerSoft</div>
+        <h1 className="hero-title">Sistema de Gestión</h1>
+        <p>Administra tu panadería de manera eficiente con nuestro sistema integral de gestión.</p>
+      </div>
+      
+      <div className="auth-forms">
+        <section className="form" aria-labelledby="login-title">
+          <div className="form-card">
+            <div className="form-header">
+              <div className="form-icon" aria-hidden="true">
+                <svg
+                  width="36"
+                  height="36"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5Zm0 2c-3.866 0-7 3.134-7 7 0 .552.448 1 1 1h12c.552 0 1-.448 1-1 0-3.866-3.134-7-7-7Z"
+                    fill="#7A4D14"
+                  />
+                </svg>
               </div>
-            </div>
-          ) : null}
-
-          {globalError && !globalSuccess ? (
-            <div className="alert error" role="alert" aria-live="assertive">
-              {globalError}
-            </div>
-          ) : null}
-
-          <form onSubmit={handleSubmit} noValidate>
-            <div className="field">
-              <label htmlFor="login-email">Correo electronico</label>
-              <input
-                id="login-email"
-                type="email"
-                autoComplete="email"
-                placeholder="ejemplo@email.com"
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                aria-required="true"
-                aria-invalid={Boolean(emailError)}
-                aria-describedby={emailError ? 'login-email-error' : undefined}
-                className={emailError ? 'has-error' : ''}
-                disabled={loading}
-                required
-              />
-              {emailError ? (
-                <p id="login-email-error" className="error" role="alert">
-                  {emailError}
-                </p>
-              ) : null}
+              <h2 id="login-title">Iniciar sesion</h2>
+              <p>Ingresa tus credenciales para continuar</p>
             </div>
 
-            <div className="field">
-              <label htmlFor="login-password">Contrasena</label>
-              <div className="input-with-icon">
+            {globalSuccess ? (
+              <div className="alert success" role="status" aria-live="polite">
+                <div className="alert-message">
+                  <span>{globalSuccess}</span>
+                </div>
+              </div>
+            ) : null}
+
+            {globalError && !globalSuccess ? (
+              <div className="alert error" role="alert" aria-live="assertive">
+                {globalError}
+              </div>
+            ) : null}
+
+            <form onSubmit={handleSubmit} noValidate>
+              <div className="field">
+                <label htmlFor="login-email">Correo electronico</label>
                 <input
-                  id="login-password"
-                  type={passwordType}
-                  autoComplete="current-password"
-                  placeholder="Ingresa tu contrasena"
-                  value={password}
-                  onChange={(event) => setPassword(event.target.value)}
+                  id="login-email"
+                  type="email"
+                  autoComplete="email"
+                  placeholder="ejemplo@email.com"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
                   aria-required="true"
-                  aria-invalid={Boolean(passwordError)}
-                  aria-describedby={passwordError ? 'login-password-error' : undefined}
-                  className={passwordError ? 'has-error' : ''}
+                  aria-invalid={Boolean(emailError)}
+                  aria-describedby={emailError ? 'login-email-error' : undefined}
+                  className={emailError ? 'has-error' : ''}
                   disabled={loading}
                   required
                 />
-                <button
-                  type="button"
-                  className="icon-button"
-                  onClick={() => setShowPassword((prev) => !prev)}
-                  aria-label={toggleLabel}
-                  disabled={loading}
-                >
-                  <span aria-hidden="true">{showPassword ? 'ocultar' : 'ver'}</span>
+                {emailError ? (
+                  <p id="login-email-error" className="error" role="alert">
+                    {emailError}
+                  </p>
+                ) : null}
+              </div>
+
+              <div className="field">
+                <label htmlFor="login-password">Contrasena</label>
+                <div className="input-with-icon">
+                  <input
+                    id="login-password"
+                    type={passwordType}
+                    autoComplete="current-password"
+                    placeholder="Ingresa tu contrasena"
+                    value={password}
+                    onChange={(event) => setPassword(event.target.value)}
+                    aria-required="true"
+                    aria-invalid={Boolean(passwordError)}
+                    aria-describedby={passwordError ? 'login-password-error' : undefined}
+                    className={passwordError ? 'has-error' : ''}
+                    disabled={loading}
+                    required
+                  />
+                  <button
+                    type="button"
+                    className="icon-button"
+                    onClick={() => setShowPassword((prev) => !prev)}
+                    aria-label={toggleLabel}
+                    disabled={loading}
+                  >
+                    <span aria-hidden="true">{showPassword ? 'ocultar' : 'ver'}</span>
+                  </button>
+                </div>
+                {passwordError ? (
+                  <p id="login-password-error" className="error" role="alert">
+                    {passwordError}
+                  </p>
+                ) : null}
+              </div>
+
+              <div className="field field-inline">
+                <label>
+                  <input
+                    type="checkbox"
+                    checked={remember}
+                    onChange={(event) => setRemember(event.target.checked)}
+                    disabled={loading}
+                  />
+                  <span>Recordarme</span>
+                </label>
+                <Link to="/register" className="secondary" role="button">
+                  Registrarse
+                </Link>
+                <Link to="/forgot-password" onClick={openForgotModal}>
+                  Olvide mi contrasena
+                </Link>
+              </div>
+
+              <div className="actions">
+                <button type="submit" className="primary full-width" disabled={loading}>
+                  {loading ? 'Ingresando...' : 'Ingresar'}
                 </button>
               </div>
-              {passwordError ? (
-                <p id="login-password-error" className="error" role="alert">
-                  {passwordError}
-                </p>
-              ) : null}
-            </div>
-
-            <div className="field field-inline">
-              <label>
-                <input
-                  type="checkbox"
-                  checked={remember}
-                  onChange={(event) => setRemember(event.target.checked)}
-                  disabled={loading}
-                />
-                <span>Recordarme</span>
-              </label>
-              <Link to="/register" className="secondary" role="button">
-                Registrarse
-              </Link>
-              <Link to="/forgot-password" onClick={openForgotModal}>
-                Olvide mi contrasena
-              </Link>
-            </div>
-
-            <div className="actions">
-              <button type="submit" className="primary full-width" disabled={loading}>
-                {loading ? 'Ingresando...' : 'Ingresar'}
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
+            </form>
+          </div>
+        </section>
+      </div>
 
       {showForgotModal ? (
         <ForgotPassword
@@ -313,6 +321,6 @@ export default function Login() {
           onRequestToken={reopenForgotFromReset}
         />
       ) : null}
-    </>
+    </div>
   );
 }

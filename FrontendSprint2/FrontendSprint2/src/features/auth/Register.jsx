@@ -171,7 +171,15 @@ export default function Register() {
   const passwordStrengthId = 'register-password-strength';
 
   return (
-    <section className="form" aria-labelledby="register-title">
+    <div className="auth-layout">
+      <div className="auth-hero">
+        <div className="brand">BakerSoft</div>
+        <h1 className="hero-title">Únete a nosotros</h1>
+        <p>Crea tu cuenta y comienza a gestionar tu panadería de manera profesional y eficiente.</p>
+      </div>
+      
+      <div className="auth-forms">
+        <section className="form" aria-labelledby="register-title">
       <div className="form-card register-card">
         <div className="form-header">
           <div className="form-icon" aria-hidden="true">
@@ -326,5 +334,7 @@ export default function Register() {
         </form>
       </div>
     </section>
+      </div>
+    </div>
   );
 }

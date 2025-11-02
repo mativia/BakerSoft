@@ -197,8 +197,18 @@ export default function ForgotPassword({
   }
 
   return (
-    <section className="form" aria-labelledby="forgot-password-title">
-      {cardContent}
-    </section>
+    <div className="auth-layout">
+      <div className="auth-hero">
+        <div className="brand">BakerSoft</div>
+        <h1 className="hero-title">Recuperar Contraseña</h1>
+        <p>Te ayudamos a recuperar el acceso a tu cuenta de manera segura.</p>
+      </div>
+      
+      <div className="auth-forms">
+        <section className="form" aria-labelledby="forgot-password-title">
+          {cardContent}
+        </section>
+      </div>
+    </div>
   );
 }

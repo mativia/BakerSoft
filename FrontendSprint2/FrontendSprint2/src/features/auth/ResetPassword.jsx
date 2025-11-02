@@ -358,8 +358,18 @@ export default function ResetPassword({
   }
 
   return (
-    <section className="form" aria-labelledby="reset-password-title">
-      {cardContent}
-    </section>
+    <div className="auth-layout">
+      <div className="auth-hero">
+        <div className="brand">BakerSoft</div>
+        <h1 className="hero-title">Nueva Contraseña</h1>
+        <p>Crea una nueva contraseña segura para tu cuenta.</p>
+      </div>
+      
+      <div className="auth-forms">
+        <section className="form" aria-labelledby="reset-password-title">
+          {cardContent}
+        </section>
+      </div>
+    </div>
   );
 }
