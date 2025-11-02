@@ -5,13 +5,13 @@ import './AppLayout.css';
 import { useAuth } from '../features/auth/AuthContext.jsx';
 import { getUserEmail, getUserInitials, getUserName } from '../features/auth/userUtils.js';
 
-const homeLink = { label: 'Inicio', to: '/', exact: true, icon: '??' };
+const homeLink = { label: 'Inicio', to: '/', exact: true };
 const mainLinks = [
-  { label: 'Pedidos', to: '/pedidos', icon: '??' },
-  { label: 'Clientes', to: '/clientes', icon: '??' },
-  { label: 'Finanzas', to: '/finanzas', icon: '??' },
+  { label: 'Pedidos', to: '/pedidos' },
+  { label: 'Clientes', to: '/clientes' },
+  { label: 'Finanzas', to: '/finanzas' },
 ];
-const footerItem = { label: 'Configuraciones', to: '/configuraciones', icon: '??' };
+const footerItem = { label: 'Configuraciones', to: '/configuraciones' };
 const productsSubmenuItems = [
   { label: 'Productos', to: '/productos', exact: true },
   { label: 'Tipo de Producto', to: '/productos/tipos' },
@@ -76,9 +76,6 @@ function Sidebar() {
           className={({ isActive }) => clsx('app-menu-link', { active: isActive })}
           onClick={handlePrimaryClick}
         >
-          <span className="app-menu-icon" aria-hidden="true">
-            {homeLink.icon}
-          </span>
           <span className="app-menu-label">{homeLink.label}</span>
         </NavLink>
 
@@ -92,9 +89,6 @@ function Sidebar() {
             aria-haspopup="true"
             role="menuitem"
           >
-            <span className="app-menu-icon" aria-hidden="true">
-              ??
-            </span>
             <span className="app-menu-label">Productos</span>
           </button>
 
@@ -127,9 +121,6 @@ function Sidebar() {
             className={({ isActive }) => clsx('app-menu-link', { active: isActive })}
             onClick={handlePrimaryClick}
           >
-            <span className="app-menu-icon" aria-hidden="true">
-              {item.icon}
-            </span>
             <span className="app-menu-label">{item.label}</span>
           </NavLink>
         ))}
@@ -142,15 +133,9 @@ function Sidebar() {
           className={({ isActive }) => clsx('app-menu-link', { active: isActive })}
           onClick={handlePrimaryClick}
         >
-          <span className="app-menu-icon" aria-hidden="true">
-            {footerItem.icon}
-          </span>
           <span className="app-menu-label">{footerItem.label}</span>
         </NavLink>
         <button type="button" className="app-menu-link app-menu-logout" onClick={handleLogout}>
-          <span className="app-menu-icon" aria-hidden="true">
-            ⎋
-          </span>
           <span className="app-menu-label">Cerrar sesion</span>
         </button>
       </div>
