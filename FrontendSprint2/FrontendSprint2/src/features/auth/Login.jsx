@@ -49,7 +49,7 @@ export default function Login() {
   const emailError = clientErrors.email || serverErrors.email;
   const passwordError = clientErrors.password || serverErrors.password;
   const passwordType = showPassword ? 'text' : 'password';
-  const toggleLabel = showPassword ? 'Ocultar contrasena' : 'Mostrar contrasena';
+  const toggleLabel = showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña';
 
   const openForgotModal = (event) => {
     if (event) {
@@ -97,7 +97,7 @@ export default function Login() {
       nextClientErrors.email = 'Email invalido';
     }
     if (!password) {
-      nextClientErrors.password = 'La contrasena es obligatoria';
+      nextClientErrors.password = 'La contraseña es obligatoria';
     }
     if (Object.keys(nextClientErrors).length > 0) {
       setClientErrors(nextClientErrors);
@@ -243,13 +243,13 @@ export default function Login() {
               </div>
 
               <div className="field">
-                <label htmlFor="login-password">Contrasena</label>
+                <label htmlFor="login-password">Contraseña</label>
                 <div className="input-with-icon">
                   <input
                     id="login-password"
                     type={passwordType}
                     autoComplete="current-password"
-                    placeholder="Ingresa tu contrasena"
+                    placeholder="Ingresa tu contraseña"
                     value={password}
                     onChange={(event) => setPassword(event.target.value)}
                     aria-required="true"
@@ -290,7 +290,7 @@ export default function Login() {
                   Registrarse
                 </Link>
                 <Link to="/forgot-password" onClick={openForgotModal}>
-                  Olvide mi contrasena
+                  Olvide mi contraseña
                 </Link>
               </div>
 

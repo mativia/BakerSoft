@@ -60,6 +60,12 @@
   gap: 24px;
 }
 
+.form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .form-card .form-header {
   display: flex;
   flex-direction: column;
@@ -308,7 +314,13 @@
 .modal-card .field-inline label {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+}
+
+.field-inline label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .modal-card .field-inline a {
@@ -319,6 +331,11 @@
 
 .modal-card .field-inline a:hover {
   text-decoration: underline;
+}
+
+.field-inline label span {
+  font-size: 0.75rem;
+  color: #64748b;
 }
 
 .modal-header {
