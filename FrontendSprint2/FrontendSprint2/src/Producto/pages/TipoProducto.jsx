@@ -271,7 +271,7 @@ function TipoProducto() {
                         onClick={() => navigate(`/productos/tipos/editar/${tipo.id}`)}
                         aria-label={`Editar ${tipo.nombre}`}
                       >
-                        ??
+                        ✏
                       </button>
                       <button
                         className="tp-action-button tp-action-delete"
@@ -279,7 +279,7 @@ function TipoProducto() {
                         aria-label={`Eliminar ${tipo.nombre}`}
                         disabled={isDeleting && deleteTarget?.id === tipo.id}
                       >
-                        ???
+                        🗑
                       </button>
                     </td>
                   </tr>
